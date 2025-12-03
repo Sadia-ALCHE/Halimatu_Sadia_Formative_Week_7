@@ -62,6 +62,21 @@ class Budget_Tracker:
             for t in self.transactions:
                 print(t.date, t.amount, t.category, t.description, t.type)
 
+    # Let's validate our amount to make sure it is an actual number and not less than 0
+    def show_valid_amount(self):
+        while True:
+            amount = input("Enter amount: ")
+            try:
+                number = float(amount)
+                if number > 0:
+                    return number
+                else:
+                    print("Amount must be positive and greater than 0.")
+            except:
+                print("Invalid Number. Please try again.")
+
+
+
 
 
 
