@@ -34,3 +34,4 @@ def input_transaction():
     print("Transaction added!\n")
 
 input_transaction()
+transaction
