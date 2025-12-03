@@ -12,12 +12,12 @@ class Transaction:
 # Now, let's create our child classes
 # Child Class for Income
 class Income(Transaction):
-    def __init__(self, date, amount, category, description, transactionType):
+    def __init__(self, date, amount, category, description):
         super().__init__(date, amount, category, description, "Income")
 
 # Child Class for Expense
 class Expense(Transaction):
-    def __init__(self, date, amount, category, description, transactionType):
+    def __init__(self, date, amount, category, description):
         super().__init__(date, amount, category,description,"Expense")
 
 
@@ -36,8 +36,8 @@ class Budget_Tracker:
         category = input("Enter category of income: ")
         description = input("Enter description of income: ")
 
-        income = Income(date, amount, category, description)
-        self.transactions.append(income)
+        inc = Income(date, amount, category, description)
+        self.transactions.append(inc)
         print("Your income has been added!")
 
     # Add Your Expense
@@ -48,8 +48,8 @@ class Budget_Tracker:
         category = input("Enter category of expense: ")
         description = input("Enter description of expense: ")
 
-        expense = Expense(date, amount, category, description)
-        self.transactions.append(expense)
+        exp = Expense(date, amount, category, description)
+        self.transactions.append(exp)
         print("Your expense has been added!")
 
     # Here, we will list our various transactions inputted
@@ -75,6 +75,33 @@ class Budget_Tracker:
             except:
                 print("Invalid Number. Please try again.")
 
+# Let's create our menu which is going to display the various options provided
+# Main Menu
+
+def main():
+    tracker = Budget_Tracker()
+
+    while True:
+        print("Welcome to the Budget Tracker!")
+        print("1) Add income")
+        print("2) Add expense")
+        print("3) Show all transactions")
+        print("0) Exit")
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            tracker.add_income()
+        elif choice == "2":
+            tracker.add_expense()
+        elif choice == "3":
+            tracker.show_valid_amount()
+        elif choice == "0":
+            print("Okay, goodbye!")
+            break
+        else:
+            print("Invalid Choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
 
 
 
