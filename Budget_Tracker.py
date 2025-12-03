@@ -52,5 +52,16 @@ class Budget_Tracker:
         self.transactions.append(expense)
         print("Your expense has been added!")
 
+    # Here, we will list our various transactions inputted
+    # List All Transactions
+    def list_transactions(self):
+        print("Available transactions:")
+        if len(self.transactions) == 0:
+            print("No transactions available")
+        else:
+            for t in self.transactions:
+                print(t.date, t.amount, t.category, t.description, t.type)
+
+
 
 
