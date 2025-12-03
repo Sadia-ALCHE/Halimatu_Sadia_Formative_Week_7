@@ -1,37 +1,24 @@
-transactions = []
+# Transaction Classes
 
-def input_transaction():
-    print("\nAdding your transaction")
-    date = input("Enter your transaction date (DD-MM-YYYY): ")
-    amount = input("Enter your transaction amount: ")
+# So first we create the parent class
+class Transaction:
+    def __init__(self, date, time, amount, category, description, transactionType):
+        self.date = date
+        self.time = time
+        self.amount = amount
+        self.category = category
+        self.description = description
+        self.transactionType = transactionType
 
-    #For this part, we have to check if the number inputted is an actual number in numeric form and not in words
-    #We use try and if that does not work, we use except which gives a message to the user without my code crashing
-    try:
-        amount = float(amount)
-    except:
-        print("Not a valid amount. Please enter a numeric value.\n")
-        return
+# Now, let's create our child classes
+# Child Class for Income
+class Income(Transaction):
+    def __init__(self, date, time, amount, category, description, transactionType):
+        super().__init__(date, amount, category, description, "Income")
 
-    category = input("Enter your transaction category: ")
-    description = input("Enter your transaction description: ")
-    transactionType = input("Enter your transaction type: ")
+# Child Class for Expense
+class Expense(Transaction):
+    def __init__(self, date, time, amount, category, description, transactionType):
+        super().__init__(date, amount, category,description,"expense")
 
-    # The category basically helps me to know under what category the money coming in or going out falls under. Is it salary? For food? Gift? Transport? Etc.
-    # For description, it's basically giving me extra detail about what exactly the transaction was for.
-    # For transaction type, this is where we input what the transaction type is, is it an income or an expense?
 
-    #We now store it as a dictionary
-    t = {
-        "date": date,
-        "amount": amount,
-        "category": category,
-        "description": description,
-        "transactionType": transactionType
-        }
-
-    transactions.append(t)
-    print("Transaction added!\n")
-
-input_transaction()
-transaction
