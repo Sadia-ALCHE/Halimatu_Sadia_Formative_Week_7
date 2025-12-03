@@ -22,3 +22,6 @@ class Expense(Transaction):
         super().__init__(date, amount, category,description,"expense")
 
 
+# After making sure, we've created classes for both for our transactions, we create a class for our Budget Tracker
+
+# Budget Tracker
