@@ -21,35 +21,35 @@ class Expense(Transaction):
         super().__init__(date, amount, category,description,"Expense")
 
 
-# After making sure we've created classes for our transactions, we create a class for our Budget Tracker which is going to house our code
+# After making sure we've created classes for our transactions, we create a class for our Budget Tracker which is going to house our code.
 
 # Budget Tracker
 class Budget_Tracker:
     def __init__(self):
-        self.transactions = [] # We've created a list which is going to incorporate alll our transactions
+        self.transactions = [] # We've created a list which is going to incorporate all our transactions
 
     # Add Your Income
     def add_income(self):
         print("Adding income")
         date = input("Enter date of income(DD/MM/YYYY): ")
-        amount = input("Enter amount of income: ")
+        amount = self.validate_amount()
         category = input("Enter category of income: ")
         description = input("Enter description of income: ")
 
-        inc = Income(date, amount, category, description)
-        self.transactions.append(inc)
+        income = Income(date, amount, category, description)
+        self.transactions.append(income)
         print("Your income has been added!")
 
     # Add Your Expense
     def add_expense(self):
         print("Adding expense")
         date = input("Enter date of expense(DD/MM/YYYY): ")
-        amount = input("Enter amount of expense: ")
+        amount = self.validate_amount()
         category = input("Enter category of expense: ")
         description = input("Enter description of expense: ")
 
-        exp = Expense(date, amount, category, description)
-        self.transactions.append(exp)
+        expense = Expense(date, amount, category, description)
+        self.transactions.append(expense)
         print("Your expense has been added!")
 
     # Here, we will list our various transactions inputted
@@ -60,10 +60,10 @@ class Budget_Tracker:
             print("No transactions available")
         else:
             for t in self.transactions:
-                print(t.date, t.amount, t.category, t.description, t.type)
+                print(t)
 
     # Let's validate our amount to make sure it is an actual number and not less than 0
-    def show_valid_amount(self):
+    def validate_amount(self):
         while True:
             amount = input("Enter amount: ")
             try:
@@ -93,7 +93,7 @@ def main():
         elif choice == "2":
             tracker.add_expense()
         elif choice == "3":
-            tracker.show_valid_amount()
+            tracker.list_transactions()
         elif choice == "0":
             print("Okay, goodbye!")
             break
