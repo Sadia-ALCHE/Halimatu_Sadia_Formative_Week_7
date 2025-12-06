@@ -126,6 +126,7 @@ def main():
         print("1) Add income")
         print("2) Add expense")
         print("3) Show all transactions")
+        print("4) Filter transactions")
         print("0) Exit")
         choice = input("Enter your choice: ")
         if choice == "1":
