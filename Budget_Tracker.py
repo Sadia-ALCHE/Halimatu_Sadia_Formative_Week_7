@@ -9,6 +9,9 @@ class Transaction:
         self.description = description
         self.type = transactionType
 
+    def __str__(self):
+        return f"{self.date} | {self.amount:.2f} | {self.category} | {self.description} | {self.type}"
+
 # Now, let's create our child classes
 # Child Class for Income
 class Income(Transaction):
@@ -22,7 +25,6 @@ class Expense(Transaction):
 
 
 # After making sure we've created classes for our transactions, we create a class for our Budget Tracker which is going to house our code.
-
 # Budget Tracker
 class Budget_Tracker:
     def __init__(self):
