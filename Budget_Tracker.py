@@ -64,6 +64,44 @@ class Budget_Tracker:
             for t in self.transactions:
                 print(t)
 
+    # Let's now create our filter menu
+    # Filter Menu
+    def filter_transactions(self):
+        print("Your Filter Options:" )
+        print("1) Type")
+        print("2) Category")
+        print("3) Month(YYYY/MM")
+        choice = input("Enter your choice: ")
+
+        results = []
+        if choice == "1":
+            filter_type = input("Enter type (income/expense): ")
+            for t in self.transactions:
+                if t.type == filter_type:
+                    results.append(t)
+
+        elif choice == "2":
+            filter_category = input("Enter category : ")
+            for t in self.transactions:
+                if t.category == filter_category:
+                    results.append(t)
+
+        elif choice == "3":
+            filter_month = input("Enter month(YYYY/MM): ")
+            for t in self.transactions:
+                if t.date.startswith(filter_month):
+                    results.append(t)
+
+        else:
+            print("Invalid Choice. Please try again.")
+            return
+        if len(results) == 0:
+            print("Unable to find any matching transactions.")
+        else:
+            print("Transactions found:")
+            for r in results:
+                print(r)
+
     # Let's validate our amount to make sure it is an actual number and not less than 0
     def validate_amount(self):
         while True:
@@ -96,6 +134,8 @@ def main():
             tracker.add_expense()
         elif choice == "3":
             tracker.list_transactions()
+        elif choice == "4":
+            tracker.filter_transactions()
         elif choice == "0":
             print("Okay, goodbye!")
             break
