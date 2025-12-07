@@ -134,7 +134,9 @@ Last transaction has been removed.
 ![Image for undoing last transaction](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_undo_last_transactions.png)
 
 - Set Budget Limit
-At this psrt you now set the limit for your budget.
+At this part you now set the limit for your budget.
+
+![Image for setting budget limit](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_set_budget_limit.png)
 
 - Exit
 After typing the number for this, the output is:
