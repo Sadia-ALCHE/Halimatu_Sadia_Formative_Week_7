@@ -156,7 +156,7 @@ class BudgetTracker:
 
     # Here, we add a feature which allows the user to set their budget threshold
     def set_threshold(self):
-        print("\nSet your budget limit:")
+        print("\nSet your budget limit")
         self.budget_limit = self.validate_amount()
         print(f"Your budget limit has been set to {self.budget_limit:.2f}")
 
