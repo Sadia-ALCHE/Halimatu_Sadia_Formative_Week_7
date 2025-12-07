@@ -76,7 +76,7 @@ Closes the program.
 
 # Sample Interactions
 - Adding Income:
-  ![]()
+  ![Image](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_add_income.png)
   Adding income
   Enter date of income (DD/MM/YYYY): 02/12/2024
   Enter amount: 1200
