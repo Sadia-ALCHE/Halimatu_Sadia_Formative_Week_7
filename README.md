@@ -129,8 +129,15 @@ Category totals:
 ![Image showing the summary](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_show_summary.png)
 
 - Undo Last Transaction
-After clicking that, the output is: 
+After clicking typing the number for this, the output is: 
 Last transaction has been removed.
+![Image for undoing last transaction](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_undo_last_transactions.png)
+
+- Exit
+After typing the number for this, the output is:
+Okay, goodbye!
+![Image for Exit](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_undo_last_transactions.png)
+
 
 
 
