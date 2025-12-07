@@ -76,20 +76,21 @@ Closes the program.
 
 # Sample Interactions
 - Adding Income:
-  Adding income
-  Enter date of income (DD/MM/YYYY): 02/12/2024
-  Enter amount: 1200
-  Enter category of income: salary
-  Enter description of income: November salary
+  Adding income,
+  Enter date of income (DD/MM/YYYY): 02/12/2024,
+  Enter amount: 1200,
+  Enter category of income: salary,
+  Enter description of income: November salary,
   Your income has been added!
   ![Image for Adding Income](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_add_income.png)
 
 - Adding Expense With Warning
-Adding expense
-Enter date of expense (DD/MM/YYYY): 03/12/2024
-Enter amount: 900
-Enter category of expense: shopping
-Enter description of expense: clothes
+Adding expense,
+Enter date of expense (DD/MM/YYYY): 03/12/2024,
+Enter amount: 900,
+Enter category of expense: shopping,
+Enter description of expense: clothes,
+![Image for Adding expense](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_add_expense.png)
 
 WARNING: This expense is above your budget warning limit!
 Do you still want to continue? (yes/no): no
