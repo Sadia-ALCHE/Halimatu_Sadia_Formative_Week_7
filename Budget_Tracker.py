@@ -32,7 +32,7 @@ class BudgetTracker:
 
     # Add Your Income
     def add_income(self):
-        print("Adding income")
+        print("\nAdding income")
         date = input("Enter date of income(DD/MM/YYYY): ")
         amount = self.validate_amount()
         category = input("Enter category of income: ")
