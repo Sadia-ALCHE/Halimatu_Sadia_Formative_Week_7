@@ -76,6 +76,7 @@ Closes the program.
 
 # Sample Interactions
 - Adding Income:
+  ![]()
   Adding income
   Enter date of income (DD/MM/YYYY): 02/12/2024
   Enter amount: 1200
