@@ -90,7 +90,8 @@ Enter description of expense: clothes
 WARNING: This expense is above your budget warning limit!
 Do you still want to continue? (yes/no): no
 Expense cancelled.
-# If the user chooses yes, then the output becomes:
+
+If the user chooses yes, then the output becomes:
 Your expense has been added!
 
 - Listing Transactions
