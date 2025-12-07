@@ -76,12 +76,12 @@ Closes the program.
 
 # Sample Interactions
 - Adding Income:
-Adding income
-Enter date of income (DD/MM/YYYY): 02/12/2024
-Enter amount: 1200
-Enter category of income: salary
-Enter description of income: November salary
-Your income has been added!
+  Adding income
+  Enter date of income (DD/MM/YYYY): 02/12/2024
+  Enter amount: 1200
+  Enter category of income: salary
+  Enter description of income: November salary
+  Your income has been added!
 
 - Adding Expense With Warning
 Adding expense
