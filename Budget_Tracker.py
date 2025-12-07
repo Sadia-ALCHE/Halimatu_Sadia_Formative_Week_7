@@ -133,6 +133,15 @@ class BudgetTracker:
         for category, total in category_totals.items():
             print(f"- {category}: {abs(total):.2f}")
 
+    # Let's create a feature for undoing our last transaction
+    # Undo last transaction
+    def undo_last_transaction(self):
+        if len(self.transactions) == 0:
+            print("No transactions available")
+        else:
+            remove_transaction = self.transactions.pop()
+            print("\nRemoving transaction:")
+            print(remove_transaction)
 
     # Let's validate our amount to make sure it is an actual number and not less than 0
     def validate_amount(self):
@@ -159,6 +168,7 @@ def main():
         print("3) Show all transactions")
         print("4) Filter transactions")
         print("5) Display summary")
+        print("6) Undo the last transaction")
         print("0) Exit")
 
         choice = input("Enter your choice: ")
@@ -172,6 +182,8 @@ def main():
             tracker.filter_transactions()
         elif choice == "5":
             tracker.display_summary()
+        elif choice == "6":
+            tracker.undo_last_transaction()
         elif choice == "0":
             print("Okay, goodbye!")
             break
