@@ -52,12 +52,12 @@ class BudgetTracker:
         description = input("Enter description of expense: ")
 
         # Here, we create a warning check
-        if self.threshold is not None and amount > self.threshold:
+        if self.budget_limit is not None and amount > self.budget_limit:
             print("\nWARNING: Your expense is way above your budget limit!")
             choice = input("Do you still want to continue? (yes/no): ").lower().strip()
 
             if choice == "no":
-                print("Expense has been canceled.")
+                print("Expense has been cancelled.")
                 return      # This stops our function here
 
         # But if the user agrees, then we proceed to:
@@ -81,7 +81,7 @@ class BudgetTracker:
         print("\nYour Filter Options:" )
         print("1) Type")
         print("2) Category")
-        print("3) Month(YYYY/MM")
+        print("3) Month(YYYY/MM)")
         choice = input("Enter your choice: ")
 
         results = []
@@ -179,7 +179,7 @@ def main():
     tracker = BudgetTracker()
 
     while True:
-        print("Welcome to the Budget Tracker!")
+        print("\nWelcome to the Budget Tracker!")
         print("1) Add income")
         print("2) Add expense")
         print("3) Show all transactions")
