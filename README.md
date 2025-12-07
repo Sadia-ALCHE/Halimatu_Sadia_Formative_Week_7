@@ -19,12 +19,15 @@ The goal of the project was to practise object-oriented programming, input valid
 Now, during this program, everything we do is stored in a list.
 
 # How to Run the Program
-1. First of all, you make sure you have Python 3 installed.  
-2. Then, you download or clone the GitHub repository.
-3. Navigate to the folder in your terminal.
-4. Run the program using:
-   python main.py
-5. The main menu will appear, and you can choose an action by typing a number.
+1. Open PyCharm.
+2. Open the project folder
+- (If you already created a GitHub repository and cloned/downloaded it,
+go to File; Open and select that folder.)
+- Make sure your .py file (your budget tracker code) is inside this folder.
+3. In PyCharm’s Project sidebar, click on your Python file
+(example: main.py or whatever you named your file).
+4. At the top-right of PyCharm, click the green run button ️OR right-click the file; Run 'main'.
+5. The program will start running in the black window at the bottom (the terminal).
 
 # When you run the program, this menu is going to appear
 Welcome to the Budget Tracker!
