@@ -126,9 +126,12 @@ Balance: 900.00
 Category totals:
 - salary: 1200.00
 - food: 300.00
+![Image showing the summary](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_show_summary.png)
 
 - Undo Last Transaction
+After clicking that, the output is: 
 Last transaction has been removed.
+
 
 
 
