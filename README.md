@@ -135,7 +135,10 @@ Last transaction has been removed.
 
 - Set Budget Limit
 At this part you now set the limit for your budget.
-
+After choosing this option, the output is:
+Set your budget limit ;
+Enter amount: 5800 ;
+Your budget limit has been set to 5800.00
 ![Image for setting budget limit](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_set_budget_limit.png)
 
 - Exit
