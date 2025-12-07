@@ -29,6 +29,7 @@ class Expense(Transaction):
 class BudgetTracker:
     def __init__(self):
         self.transactions = [] # We've created a list which is going to incorporate all our transactions
+        self.budget_limit = None  # Here, we have created a budget limit variable
 
     # Add Your Income
     def add_income(self):
@@ -50,6 +51,16 @@ class BudgetTracker:
         category = input("Enter category of expense: ")
         description = input("Enter description of expense: ")
 
+        # Here, we create a warning check
+        if self.threshold is not None and amount > self.threshold:
+            print("\nWARNING: Your expense is way above your budget limit!")
+            choice = input("Do you still want to continue? (yes/no): ").lower().strip()
+
+            if choice == "no":
+                print("Expense has been canceled.")
+                return      # This stops our function here
+
+        # But if the user agrees, then we proceed to:
         expense = Expense(date, amount, category, description)
         self.transactions.append(expense)
         print("Your expense has been added!")
@@ -143,6 +154,12 @@ class BudgetTracker:
             print("\nRemoving transaction:")
             print(remove_transaction)
 
+    # Here, we add a feature which allows the user to set their budget threshold
+    def set_threshold(self):
+        print("\nSet your budget limit:")
+        self.budget_limit = self.validate_amount()
+        print(f"Your budget limit has been set to {self.budget_limit:.2f}")
+
     # Let's validate our amount to make sure it is an actual number and not less than 0
     def validate_amount(self):
         while True:
@@ -169,6 +186,7 @@ def main():
         print("4) Filter transactions")
         print("5) Display summary")
         print("6) Undo the last transaction")
+        print("7) Set your budget limit")
         print("0) Exit")
 
         choice = input("Enter your choice: ")
@@ -184,6 +202,8 @@ def main():
             tracker.display_summary()
         elif choice == "6":
             tracker.undo_last_transaction()
+        elif choice == "7":
+            tracker.set_threshold()
         elif choice == "0":
             print("Okay, goodbye!")
             break
