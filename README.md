@@ -19,12 +19,15 @@ The goal of the project was to practise object-oriented programming, input valid
 Now, during this program, everything we do is stored in a list.
 
 # How to Run the Program
-1. First of all, you make sure you have Python 3 installed.  
-2. Then, you download or clone the GitHub repository.
-3. Navigate to the folder in your terminal.
-4. Run the program using:
-   python main.py
-5. The main menu will appear, and you can choose an action by typing a number.
+1. Open PyCharm.
+2. Open the project folder
+- (If you already created a GitHub repository and cloned/downloaded it,
+go to File; Open and select that folder.)
+- Make sure your .py file (your budget tracker code) is inside this folder.
+3. In PyCharm’s Project sidebar, click on your Python file
+(example: main.py or whatever you named your file).
+4. At the top-right of PyCharm, click the green run button ️OR right-click the file; Run 'main'.
+5. The program will start running in the black window at the bottom (the terminal).
 
 # When you run the program, this menu is going to appear
 Welcome to the Budget Tracker!
@@ -73,23 +76,27 @@ Closes the program.
 
 # Sample Interactions
 - Adding Income:
-Adding income
-Enter date of income (DD/MM/YYYY): 02/12/2024
-Enter amount: 1200
-Enter category of income: salary
-Enter description of income: November salary
-Your income has been added!
+  Adding income,
+  Enter date of income (DD/MM/YYYY): 02/12/2024,
+  Enter amount: 1200,
+  Enter category of income: salary,
+  Enter description of income: November salary,
+  Your income has been added!
+  ![Image for Adding Income](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_add_income.png)
 
 - Adding Expense With Warning
-Adding expense
-Enter date of expense (DD/MM/YYYY): 03/12/2024
-Enter amount: 900
-Enter category of expense: shopping
-Enter description of expense: clothes
+Adding expense,
+Enter date of expense (DD/MM/YYYY): 03/12/2024,
+Enter amount: 900,
+Enter category of expense: shopping,
+Enter description of expense: clothes,
+![Image for Adding expense](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_add_expense.png)
 
-WARNING: This expense is above your budget warning limit!
-Do you still want to continue? (yes/no): no
+(If the expense is higher than your budget limit, this output is printed:)
+WARNING: This expense is above your budget warning limit! ;
+Do you still want to continue? (yes/no): no ;
 Expense cancelled.
+![Image for threshold warning](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_budget_limit_warning.png)
 
 If the user chooses yes, then the output becomes:
 Your expense has been added!
@@ -97,16 +104,18 @@ Your expense has been added!
 - Listing Transactions
 Available transactions:
 03/12/2024 | 1200.00 | salary | November salary | income
+![Image for listing transaction](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_list_transactions.png)
 
 - Your Filter Options:
 1) Type
 2) Category
-3) Month (YYYY/MM)
-Enter your choice: 2
-Enter category: salary
+3) Month (YYYY/MM) ;
+Enter your choice: 2 ;
+Enter category: salary ;
 
 Transactions found:
 03/12/2024 | 1200.00 | salary | November salary | income
+![Image for filter options](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_filter_transactions.png)
 
 - Summary Example
 ````Budget Summary````
@@ -117,9 +126,27 @@ Balance: 900.00
 Category totals:
 - salary: 1200.00
 - food: 300.00
+![Image showing the summary](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_show_summary.png)
 
 - Undo Last Transaction
+After clicking typing the number for this, the output is: 
 Last transaction has been removed.
+![Image for undoing last transaction](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_undo_last_transactions.png)
+
+- Set Budget Limit
+At this part you now set the limit for your budget.
+After choosing this option, the output is:
+Set your budget limit ;
+Enter amount: 5800 ;
+Your budget limit has been set to 5800.00
+![Image for setting budget limit](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_set_budget_limit.png)
+
+- Exit
+After typing the number for this, the output is:
+Okay, goodbye!
+![Image for Exit](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_exit_budget_tracker.png)
+
+
 
 
 
