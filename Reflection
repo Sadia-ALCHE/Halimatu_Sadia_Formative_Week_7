@@ -1,1 +1,22 @@
+# Reflection
 
+I won't lie. This project has been a surprisingly eye-opening experience. 
+At first, the idea of building a whole program from scratch felt overwhelming, especially one with menus, classes, and also inheritance, especially and different features working together. 
+But as I moved step by step, I started seeing how each part connected. I learned how classes work in a real program, not just in isolated exercises or on their own. 
+Using inheritance to create Income and Expense objects helped me understand why object-oriented programming actually matters. 
+I also learned the importance of structuring code so that it makes sense not only to the computer, but to me as the one writing it.
+
+I think one of the biggest lessons I learned was to always check small details, because even tiny things can break the whole program. 
+For example, the difference between “Income” and “income” caused hours of confusion, seriously. 
+It taught me how careful Python is with exact matching, and how important validation and consistency are in programming. 
+I also learned how much easier debugging becomes when I slow down, print values, and test one part at a time instead of panicking when I see all the red lines screaming, error, error, error.
+
+I faced several challenges along the way. Getting the filter system to work correctly took a lot of patience, especially when working with date formats and matching categories. 
+I think the summary method was also tricky because I had to calculate totals while tracking categories at the same time. 
+Adding new features like the budget warning and undo function forced me to think differently about how the program flows. 
+Sometimes I had to rewrite things I thought were already “finished,” and that taught me that revising your code is just part of the process.
+
+If I had more time, I would improve this project by adding data persistence so the transactions don’t disappear after closing the program. 
+I would also like to format the output more neatly, maybe using tables or colors to make it more readable.
+Another improvement would be turning it into a web app in the future, because I can now see how this simple tracker could grow into something more useful.
+Overall, I would say this project hasn’t just taught me Python—it has taught me patience, problem-solving, and how satisfying it feels when something finally works after a long struggle.
