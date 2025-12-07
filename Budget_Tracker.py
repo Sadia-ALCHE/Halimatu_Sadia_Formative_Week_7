@@ -4,7 +4,7 @@
 class Transaction:
     def __init__(self, date, amount, category, description, transactionType):
         self.date = date
-        self.amount = amount
+        self.amount = float(amount)
         self.category = category.lower().strip()
         self.description = description
         self.type = transactionType.lower().strip()
@@ -44,7 +44,7 @@ class BudgetTracker:
 
     # Add Your Expense
     def add_expense(self):
-        print("Adding expense")
+        print("\nAdding expense")
         date = input("Enter date of expense(DD/MM/YYYY): ")
         amount = self.validate_amount()
         category = input("Enter category of expense: ")
@@ -57,7 +57,7 @@ class BudgetTracker:
     # Here, we will list our various transactions inputted
     # List All Transactions
     def list_transactions(self):
-        print("Available transactions:")
+        print("\nAvailable transactions:")
         if len(self.transactions) == 0:
             print("No transactions available")
         else:
@@ -67,7 +67,7 @@ class BudgetTracker:
     # Let's now create our filter menu
     # Filter Menu
     def filter_transactions(self):
-        print("Your Filter Options:" )
+        print("\nYour Filter Options:" )
         print("1) Type")
         print("2) Category")
         print("3) Month(YYYY/MM")
@@ -125,11 +125,11 @@ class BudgetTracker:
 
         balance = total_income - total_expense        # This is the money we have left after we take out our expense from the income we have
 
-        print("````Budget Summary````")
+        print("\nBudget Summary:")
         print(f"Total Income: {total_income:.2f}")
         print(f"Total Expense: {total_expense:.2f}")
         print(f"Balance: {balance:.2f}")
-        print("Category totals:")
+        print("\nCategory totals:")
         for category, total in category_totals.items():
             print(f"- {category}: {abs(total):.2f}")
 
