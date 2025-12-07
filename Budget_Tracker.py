@@ -86,7 +86,7 @@ class BudgetTracker:
 
         results = []
         if choice == "1":
-            filter_type = input("Enter type (Income/Expense): ")
+            filter_type = input("Enter type (income/expense): ")
             for t in self.transactions:
                 if t.type == filter_type:
                     results.append(t)
