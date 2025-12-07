@@ -5,9 +5,9 @@ class Transaction:
     def __init__(self, date, amount, category, description, transactionType):
         self.date = date
         self.amount = amount
-        self.category = category
+        self.category = category.lower().strip()
         self.description = description
-        self.type = transactionType
+        self.type = transactionType.lower().strip()
 
     def __str__(self):
         return f"{self.date} | {self.amount:.2f} | {self.category} | {self.description} | {self.type}"
@@ -16,17 +16,17 @@ class Transaction:
 # Child Class for Income
 class Income(Transaction):
     def __init__(self, date, amount, category, description):
-        super().__init__(date, amount, category, description, "Income")
+        super().__init__(date, amount, category, description, "income")
 
 # Child Class for Expense
 class Expense(Transaction):
     def __init__(self, date, amount, category, description):
-        super().__init__(date, amount, category,description,"Expense")
+        super().__init__(date, amount, category,description,"expense")
 
 
 # After making sure we've created classes for our transactions, we create a class for our Budget Tracker which is going to house our code.
 # Budget Tracker
-class Budget_Tracker:
+class BudgetTracker:
     def __init__(self):
         self.transactions = [] # We've created a list which is going to incorporate all our transactions
 
@@ -75,7 +75,7 @@ class Budget_Tracker:
 
         results = []
         if choice == "1":
-            filter_type = input("Enter type (income/expense): ")
+            filter_type = input("Enter type (Income/Expense): ")
             for t in self.transactions:
                 if t.type == filter_type:
                     results.append(t)
@@ -102,6 +102,38 @@ class Budget_Tracker:
             for r in results:
                 print(r)
 
+    # Show summary of transactions
+    def display_summary(self):
+        total_income = 0
+        total_expense = 0
+        category_totals = {}
+
+        for t in self.transactions:
+            if t.type == "income":
+                total_income += t.amount
+            elif t.type == "expense":
+                total_expense += t.amount
+
+            #This updates our category totals
+            if t.category not in category_totals:
+                category_totals[t.category] = 0
+            # expense adds, income subtracts
+            if t.type == "expense":
+                category_totals[t.category] += t.amount
+            else:
+                category_totals[t.category] -= t.amount
+
+        balance = total_income - total_expense        # This is the money we have left after we take out our expense from the income we have
+
+        print("````Budget Summary````")
+        print(f"Total Income: {total_income:.2f}")
+        print(f"Total Expense: {total_expense:.2f}")
+        print(f"Balance: {balance:.2f}")
+        print("Category totals:")
+        for category, total in category_totals.items():
+            print(f"- {category}: {abs(total):.2f}")
+
+
     # Let's validate our amount to make sure it is an actual number and not less than 0
     def validate_amount(self):
         while True:
@@ -117,9 +149,8 @@ class Budget_Tracker:
 
 # Let's create our menu which is going to display the various options provided
 # Main Menu
-
 def main():
-    tracker = Budget_Tracker()
+    tracker = BudgetTracker()
 
     while True:
         print("Welcome to the Budget Tracker!")
@@ -127,7 +158,9 @@ def main():
         print("2) Add expense")
         print("3) Show all transactions")
         print("4) Filter transactions")
+        print("5) Display summary")
         print("0) Exit")
+
         choice = input("Enter your choice: ")
         if choice == "1":
             tracker.add_income()
@@ -137,6 +170,8 @@ def main():
             tracker.list_transactions()
         elif choice == "4":
             tracker.filter_transactions()
+        elif choice == "5":
+            tracker.display_summary()
         elif choice == "0":
             print("Okay, goodbye!")
             break
