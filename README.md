@@ -90,18 +90,20 @@ Enter date of expense (DD/MM/YYYY): 03/12/2024,
 Enter amount: 900,
 Enter category of expense: shopping,
 Enter description of expense: clothes,
-![Image for Adding expense](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_add_expense.png)
 
 WARNING: This expense is above your budget warning limit!
 Do you still want to continue? (yes/no): no
 Expense cancelled.
+![Image for threshold warning](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_budget_limit_warning.png)
 
 If the user chooses yes, then the output becomes:
 Your expense has been added!
+![Image for Adding expense](https://github.com/Sadia-ALCHE/Halimatu_Sadia_Formative_Week_7/blob/main/Screenshots(Budget%20Tracker)/Screenshot_add_expense.png)
 
 - Listing Transactions
 Available transactions:
 03/12/2024 | 1200.00 | salary | November salary | income
+
 
 - Your Filter Options:
 1) Type
